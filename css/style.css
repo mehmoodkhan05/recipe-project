@@ -50,6 +50,10 @@ body {
     width: 100%;
 }
 
+.navbar-section .navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
 .navbar-section .navbar .navbar-nav .dropdown button {
     background: var(--bg-color);
     padding: 10px 10px;

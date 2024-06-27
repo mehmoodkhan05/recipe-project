@@ -124,7 +124,7 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "72.5px",
+          centerPadding: "71px",
           slidesToShow: 3,
         },
       },
@@ -144,7 +144,7 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "190px",
+          centerPadding: "185px",
           slidesToShow: 1,
         },
       },
