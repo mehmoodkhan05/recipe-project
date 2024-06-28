@@ -6,6 +6,7 @@ $(document).ready(function () {
       slidesToShow: 1,
       dots: false,
       arrows: false,
+      autoplay: true,
       infinite: true,
       responsive: [
         {
@@ -66,8 +67,9 @@ $(document).ready(function () {
     centerMode: true,
     centerPadding: "482px",
     slidesToShow: 1,
-    dots: true,
+    dots: false,
     arrows: false,
+    autoplay: true,
     infinite: true,
     responsive: [
       {
@@ -128,8 +130,9 @@ $(document).ready(function () {
     centerMode: true,
     centerPadding: "485px",
     slidesToShow: 1,
-    dots: true,
+    dots: false,
     arrows: false,
+    autoplay: true,
     infinite: true,
     responsive: [
       {
