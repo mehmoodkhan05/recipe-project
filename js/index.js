@@ -61,69 +61,6 @@ $(document).ready(function () {
   });
 });
 
-// $(document).ready(function () {
-//   $(".slick-carousel-center_community").slick({
-//     centerMode: true,
-//     centerPadding: "482px",
-//     slidesToShow: 1,
-//     dots: false,
-//     arrows: false,
-//     autoplay: true,
-//     infinite: true,
-//     responsive: [
-//       {
-//         breakpoint: 1400,
-//         settings: {
-//           arrows: true,
-//           centerMode: true,
-//           centerPadding: "72.5px",
-//           slidesToShow: 3,
-//         },
-//       },
-
-//       {
-//         breakpoint: 1200,
-//         settings: {
-//           arrows: true,
-//           centerMode: true,
-//           centerPadding: "40px",
-//           slidesToShow: 2,
-//         },
-//       },
-
-//       {
-//         breakpoint: 992,
-//         settings: {
-//           arrows: true,
-//           centerMode: true,
-//           centerPadding: "183px",
-//           slidesToShow: 1,
-//         },
-//       },
-
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           arrows: true,
-//           centerMode: true,
-//           centerPadding: "93px",
-//           slidesToShow: 1,
-//         },
-//       },
-
-//       {
-//         breakpoint: 575,
-//         settings: {
-//           arrows: true,
-//           centerMode: true,
-//           centerPadding: "0",
-//           slidesToShow: 1,
-//         },
-//       },
-//     ],
-//   });
-// });
-
 $(document).ready(function () {
   $(".slick-carousel-center_trending").slick({
     centerMode: true,
@@ -209,3 +146,5 @@ $(document).ready(function () {
     },
   });
 });
+
+
