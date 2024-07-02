@@ -15,6 +15,9 @@
         crossorigin="anonymous"></script>
     <!-- BOOTSTRAP CSS -->
 
+    <!-- Include jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- FONT AWESOME -->
@@ -285,13 +288,15 @@
     <section class="community-choice">
         <div class="container">
             <div class="community-choice_header d-flex align-items-center">
-                <p class="fs-42">Community's <span class="primary">Choice</span></p>
+                <p class="fs-42">Community's
+                    <span class="primary">Choice</span>
+                </p>
                 <a href="#" class="btn btn-danger ms-auto">New Community</a>
             </div>
             <div class="community-choice-carousel">
-                <div class="slick-carousel-center_community">
+                <div class="slick-carousel-center_community" id="community-content">
 
-                    <div class="card">
+                    <!-- <div class="card">
                         <img src="../assets/images/speghati.jpg" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
                             <h6 class="card-title">Spaghetti Carbonara
@@ -517,7 +522,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -1039,12 +1044,12 @@
                 <a href="#" class="btn btn-danger ms-auto">View all</a>
             </div>
 
-            <div class="row">
+            <div class="row" id="blog-container">
                 <div class="col-lg-6">
                     <div class="left-side-col_bg">
                         <div class="body text-white">
                             <p class="mb-0">message content</p>
-                            <div class="description d-flex align-items-center">
+                            <div class="description d-flex align-items-center justify-content-between">
                                 <p class="mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
                                     nesciunt
                                     vel architecto temporibus beatae delectus non est error saepe sint.</p>
@@ -1269,7 +1274,7 @@
                         <form action="" class="d-flex position-relative">
                             <input class="form-control" type="text" name="" id="" placeholder="Enter Your Email ">
                             <button class="btn btn-danger subscription_btn position-absolute" type="button">
-                                <span class="ms-1">Subscribe</span>
+                                <span class="">Subscribe</span>
                             </button>
                         </form>
                     </div>
@@ -1362,6 +1367,188 @@
         </div>
     </section>
     <!-- FOOTER SECTION -->
+
+    <!-- community choice JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchCommunityChoices();
+
+            function fetchCommunityChoices() {
+                const apiUrl = 'https://recipe.edevz.com/client/api/communityChoice.php';
+
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success && Array.isArray(data.recommendations)) {
+                            updateCommunityContent(data.recommendations);
+                            initializeSlickSlider();
+                        }
+                    })
+                    .catch(error => console.error('Error fetching community choices:', error));
+            }
+
+            function updateCommunityContent(recipes) {
+                const communityContent = document.getElementById('community-content');
+                communityContent.innerHTML = '';
+
+                recipes.forEach(recipe => {
+                    const cardHtml = `
+                <div class="card">
+                    <img src="${recipe.picture_url || '../assets/images/speghati.jpg'}" class="card-img-top img-fluid" alt="${recipe.title}">
+                    <div class="card-body">
+                        <h6 class="card-title d-flex justify-content-between">${recipe.title}
+                            <span>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                ${recipe.rating}
+                            </span>
+                        </h6>
+                        <div class="card-btn">
+                            <a href="#" class="text-decoration-none primary me-2">Button 1</a>
+                            <a href="#" class="text-decoration-none primary">Button 2</a>
+                        </div>
+                        <div class="card-bottom d-flex mt-3">
+                            <div class="likes-icon">
+                                <i class="fa-regular fa-heart" style="color: #e0525e;"></i>
+                                <span>${recipe.total_likes}</span>
+                            </div>
+                            <div class="comments-icons ms-4">
+                                <i class="fa-regular fa-message"></i>
+                                <span>${recipe.total_comments}</span>
+                            </div>
+                            <div class="share-icon ms-4">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                <span>${recipe.total_likes}</span>
+                            </div>
+                            <div class="save-icon ms-auto">
+                                <i class="fa-regular fa-bookmark"
+                                    style="color: #f6ddd7; background: var(--primary-color); padding: 8px 10px; border-radius: 5px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+                    communityContent.insertAdjacentHTML('beforeend', cardHtml);
+                });
+            }
+
+            function initializeSlickSlider() {
+                $(".slick-carousel-center_community").slick({
+                    centerMode: true,
+                    centerPadding: "482px",
+                    slidesToShow: 1,
+                    dots: false,
+                    arrows: false,
+                    autoplay: true,
+                    infinite: true,
+                    responsive: [
+                        {
+                            breakpoint: 1400,
+                            settings: {
+                                arrows: true,
+                                centerMode: true,
+                                centerPadding: "72.5px",
+                                slidesToShow: 3,
+                            },
+                        },
+
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                arrows: true,
+                                centerMode: true,
+                                centerPadding: "40px",
+                                slidesToShow: 2,
+                            },
+                        },
+
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                arrows: true,
+                                centerMode: true,
+                                centerPadding: "183px",
+                                slidesToShow: 1,
+                            },
+                        },
+
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                arrows: true,
+                                centerMode: true,
+                                centerPadding: "93px",
+                                slidesToShow: 1,
+                            },
+                        },
+
+                        {
+                            breakpoint: 575,
+                            settings: {
+                                arrows: true,
+                                centerMode: true,
+                                centerPadding: "0",
+                                slidesToShow: 1,
+                            },
+                        },
+                    ],
+                });
+            }
+        });
+    </script>
+    <!-- community choice JS -->
+
+    <!-- blogs section JS -->
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: 'https://recipe.edevz.com/client/api/blogs.php',
+                type: 'GET',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success) {
+                        const blogPosts = response.blog_posts;
+                        let blogHTML = '';
+                        for (let i = 0; i < blogPosts.length && i < 4; i++) {
+                            const blog = blogPosts[i];
+                            if (i === 0) {
+                                $('#blog-container .left-side-col_bg .body .mb-0').text(blog.blog_title);
+                                $('#blog-container .left-side-col_bg .description .mb-0').text(blog.blog_description);
+                                $('#blog-container .left-side-col_bg .blog-btn a').attr('href', blog.blog_image_url);
+                            } else {
+                                const imageURL = blog.blog_image_url ? blog.blog_image_url : '../assets/images/blog1.jpg';
+                                blogHTML += `
+                                    <div class="row">
+                                        <div class="card mb-3">
+                                            <div class="row g-0">
+                                                <div class="col-md-4 bg-image">
+                                                    <img src="${imageURL}" class="img-fluid rounded-start" alt="...">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <p class="card-title mb-0">${blog.blog_title}</p>
+                                                        <p class="card-text mb-0">${blog.blog_description}</p>
+                                                        <div class="right-side-card_btn mt-1">
+                                                            <a href="#" class="btn btn-white">Read More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }
+                        }
+                        $('#blog-container .right-side_col').html(blogHTML);
+                    }
+                },
+                error: function (error) {
+                    console.error('Error fetching blog posts:', error);
+                }
+            });
+        });
+    </script>
+    <!-- blogs section JS -->
 </body>
 
 <!-- BOOTSTRAP JS -->
