@@ -620,11 +620,11 @@ function displayCategory(category) {
     // Create the card element
     const card = document.createElement("div");
     card.className = `col-lg-${12 / numColumns} mb-4 position-relative
+    ${category === "Meals" ? "col-lg-4 col-sm-6 col-12" : ""}
     ${
-      category === "Meals" ? "col-lg-4 col-sm-6 col-12" : ""
-    }
-    ${
-      category === "Ingredients" ? "col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 justify-content-center d-flex justify-content-sm-start d-sm-block" : ""
+      category === "Ingredients"
+        ? "col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 justify-content-center d-flex justify-content-sm-start d-sm-block"
+        : ""
     }`; // Adjusting column width based on the number of columns
     card.innerHTML = `
             <div class="card ${
@@ -724,3 +724,51 @@ document.addEventListener("DOMContentLoaded", () => {
     displayCategory("Ingredients");
   }
 });
+
+// JS for login page and sesssion handling
+document
+  .getElementById("login_form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    login();
+  });
+
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  // Construct the URL with query parameters
+  const url = `https://edevz.com/recipe/login.php?email=${encodeURIComponent(
+    email
+  )}&password=${encodeURIComponent(password)}`;
+
+  fetch(url, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Response:", data); // Log the response from the server
+      if (data.success) {
+        console.log("success");
+        // Save user information in session storage
+        sessionStorage.setItem("userId", data.data.user_id);
+        //sessionStorage.setItem("userName", data.data.name);
+        sessionStorage.setItem("isLoggedIn", true);
+
+        $("#loginButton").addClass("d-none");
+        $("#profile-dropdown").removeClass("d-none");
+        window.location.href = "index.php"; // Redirect to the homepage (index.php)
+      } else {
+        document.getElementById("responseMessage").textContent =
+          "Login Failed!";
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      document.getElementById("responseMessage").textContent =
+        "An error occurred. Please try again later.";
+    });
+}

@@ -1,3 +1,7 @@
+<?php
+include "navbar.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,63 +32,6 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <section class="navbar-section">
-        <nav class="navbar navbar-expand-lg bg-white fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Recepians</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mt-1 mb-lg-0 d-lg-flex align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" aria-current="page" href="index.html">Homepage</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="community.html">Community</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="categories.html">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="#">Health log</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="#">Premium</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="#">Blog</a>
-                        </li>
-                        <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
-                        <li class="dropdown d-none">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="../assets/images/profile.jpg" alt="" class="img-fluid rounded-pill">
-                                <?php echo $_SESSION['user_name']; ?>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
-                            </ul>
-                        </li>
-                        <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="login.html">
-                                <i class="fa-solid fa-user me-1"></i>
-                                Login
-                            </a>
-                        </li>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
-    <!-- NAVBAR -->
-
     <!-- HERO SECTION SLIDER -->
     <section class="hero-section mt-5">
         <!-- LARGE VIEW SLIDER -->
@@ -1187,89 +1134,7 @@
     </section>
     <!-- BLOG SECTION -->
 
-    <!-- FOOTER SECTION -->
-    <section class="footer-section_categories pb-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-6 col-12">
-                    <h1>Recepians logo</h1>
-                    <p>Streamline inventory management <br> and order fulltimes</p>
-                </div>
-
-                <div class="col-lg-2 col-sm-6 col-12 mt-3 mt-sm-0">
-                    <h3 class="primary">Support</h3>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">On-boarding</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Help Center</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Contact us</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Expert</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Status</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-sm-6 col-12 mt-3 mt-sm-0">
-                    <h3 class="primary">Resources</h3>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Community</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Something</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Partnerships</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Perks & Benefits</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">All Docs</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-sm-6 col-12 mt-3 mt-sm-0">
-                    <h3 class="primary">Company</h3>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">About us</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">Press</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div class="footer-bottom mt-2 d-flex">
-                <div class="bottom_left-side">
-                    <p class="mb-0">
-                        <i class="fa-regular fa-copyright"></i>
-                        <span>2023 OrderEase. All rights reserved.</span>
-                    </p>
-                </div>
-
-                <div class="bottom_right-side ms-auto">
-                    <a href="#" class="text-decoration-none text-dark me-sm-3 me-1">Privacy</a>
-                    <a href="#" class="text-decoration-none text-dark">Terms</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FOOTER SECTION -->
+    <?php include "footer.php"; ?>
 </body>
 
 <!-- BOOTSTRAP JS -->

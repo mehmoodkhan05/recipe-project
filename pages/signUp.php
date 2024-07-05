@@ -1,4 +1,7 @@
-!
+<?php
+include "navbar.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,64 +54,7 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <section class="navbar-section">
-        <nav class="navbar navbar-expand-lg bg-white fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Recepians</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mt-1 mb-2 mb-lg-0 d-lg-flex align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" aria-current="page" href="index.html">Homepage</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="community.html">Community</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="categories.html">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="#">Health log</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="#">Premium</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="#">Blog</a>
-                        </li>
-                        <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
-                        <li class="dropdown d-none">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="../assets/images/profile.jpg" alt="" class="img-fluid rounded-pill">
-                                <?php echo $_SESSION['user_name']; ?>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
-                            </ul>
-                        </li>
-                        <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link active me-4" href="login.html">
-                                <i class="fa-solid fa-user me-1"></i>
-                                Login
-                            </a>
-                        </li>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
-    <!-- NAVBAR -->
-
-    <section class="signUp-section">
+    <section class="signUp-section mb-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-5 signup-main_col">
@@ -132,7 +78,7 @@
                         </div>
                         <div class="text-center mt-4">
                             <p>Already a member?
-                                <a href="login.html" class="text-decoration-none primary">login</a>
+                                <a href="login.php" class="text-decoration-none primary">login</a>
                             </p>
                         </div>
                         <div class="signup_button text-center mb-2 mt-5">
@@ -144,6 +90,8 @@
             </div>
         </div>
     </section>
+
+    <?php include "footer.php"; ?>
 </body>
 
 <!-- BOOTSTRAP JS -->
@@ -190,7 +138,7 @@
                 success: function (response) {
                     $('#responseMessage').text('Signup successful!');
                     setTimeout(function () {
-                        window.location.href = 'login.html';
+                        window.location.href = 'login.php';
                     }, 1000);
                 },
                 error: function (error) {
