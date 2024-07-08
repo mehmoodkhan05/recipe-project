@@ -1,37 +1,34 @@
 $(document).ready(function () {
   $(".slick-carousel-center_home").slick({
     centerMode: true,
-    centerPadding: "492px",
+    centerPadding: "488px",
     slidesToShow: 1,
     dots: false,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     infinite: true,
     responsive: [
       {
         breakpoint: 1400,
         settings: {
-          arrows: true,
           centerMode: true,
-          centerPadding: "0px",
-          slidesToShow: 3,
+          centerPadding: "400px",
+          slidesToShow: 1,
         },
       },
 
       {
         breakpoint: 1200,
         settings: {
-          arrows: true,
           centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 2,
+          centerPadding: "311px",
+          slidesToShow: 1,
         },
       },
 
       {
         breakpoint: 992,
         settings: {
-          arrows: true,
           centerMode: true,
           centerPadding: "190px",
           slidesToShow: 1,
@@ -41,19 +38,26 @@ $(document).ready(function () {
       {
         breakpoint: 768,
         settings: {
-          arrows: true,
           centerMode: true,
-          centerPadding: "102px",
+          centerPadding: "101px",
           slidesToShow: 1,
         },
       },
 
       {
-        breakpoint: 576,
+        breakpoint: 575,
         settings: {
-          arrows: true,
           centerMode: true,
-          centerPadding: "0px",
+          centerPadding: "70px",
+          slidesToShow: 1,
+        },
+      },
+
+      {
+        breakpoint: 425,
+        settings: {
+          centerMode: true,
+          centerPadding: "30px",
           slidesToShow: 1,
         },
       },
@@ -68,33 +72,30 @@ $(document).ready(function () {
     slidesToShow: 1,
     dots: false,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     infinite: true,
     responsive: [
       {
         breakpoint: 1400,
         settings: {
-          arrows: true,
           centerMode: true,
-          centerPadding: "72.5px",
-          slidesToShow: 3,
+          centerPadding: "395px",
+          slidesToShow: 1,
         },
       },
 
       {
         breakpoint: 1200,
         settings: {
-          arrows: true,
           centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 2,
+          centerPadding: "305px",
+          slidesToShow: 1,
         },
       },
 
       {
         breakpoint: 992,
         settings: {
-          arrows: true,
           centerMode: true,
           centerPadding: "185px",
           slidesToShow: 1,
@@ -104,7 +105,6 @@ $(document).ready(function () {
       {
         breakpoint: 768,
         settings: {
-          arrows: true,
           centerMode: true,
           centerPadding: "95px",
           slidesToShow: 1,
@@ -114,9 +114,26 @@ $(document).ready(function () {
       {
         breakpoint: 575,
         settings: {
-          arrows: true,
           centerMode: true,
-          centerPadding: "0",
+          centerPadding: "38px",
+          slidesToShow: 1,
+        },
+      },
+
+      {
+        breakpoint: 425,
+        settings: {
+          centerMode: true,
+          centerPadding: "13px",
+          slidesToShow: 1,
+        },
+      },
+
+      {
+        breakpoint: 375,
+        settings: {
+          centerMode: true,
+          centerPadding: "50px",
           slidesToShow: 1,
         },
       },
@@ -161,8 +178,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card-body">
                 <h6 class="card-title d-flex justify-content-between">
                     ${recipe.title}
-                    <span>
-                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <span class="d-flex align-items-center">
+                        <i class="fa-solid fa-star me-1" style="color: #FFD43B;"></i>
                         ${recipe.rating}
                     </span>
                 </h6>
@@ -204,31 +221,28 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesToShow: 1,
       dots: false,
       arrows: false,
-      autoplay: true,
+      autoplay: false,
       infinite: true,
       responsive: [
         {
           breakpoint: 1400,
           settings: {
-            arrows: true,
             centerMode: true,
-            centerPadding: "72.5px",
-            slidesToShow: 3,
+            centerPadding: "393px",
+            slidesToShow: 1,
           },
         },
         {
           breakpoint: 1200,
           settings: {
-            arrows: true,
             centerMode: true,
-            centerPadding: "40px",
-            slidesToShow: 2,
+            centerPadding: "303px",
+            slidesToShow: 1,
           },
         },
         {
           breakpoint: 992,
           settings: {
-            arrows: true,
             centerMode: true,
             centerPadding: "183px",
             slidesToShow: 1,
@@ -237,7 +251,6 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           breakpoint: 768,
           settings: {
-            arrows: true,
             centerMode: true,
             centerPadding: "93px",
             slidesToShow: 1,
@@ -246,9 +259,32 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           breakpoint: 575,
           settings: {
-            arrows: true,
             centerMode: true,
-            centerPadding: "0",
+            centerPadding: "35px",
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 425,
+          settings: {
+            centerMode: true,
+            centerPadding: "10px",
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 375,
+          settings: {
+            centerMode: true,
+            centerPadding: "9px",
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 320,
+          settings: {
+            centerMode: true,
+            centerPadding: "10px",
             slidesToShow: 1,
           },
         },

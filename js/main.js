@@ -4,15 +4,30 @@ $(document).ready(function () {
     centerPadding: "200px",
     slidesToShow: 1,
     focusOnSelect: true,
-    dots: true,
-    autoplay: true,
+    dots: false,
+    autoplay: false,
     responsive: [
       {
         breakpoint: 1400,
         settings: {
-          arrows: true,
           centerMode: true,
           centerPadding: "150px",
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 743,
+        settings: {
+          centerMode: true,
+          centerPadding: "100px",
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          centerMode: true,
+          centerPadding: "50px",
           slidesToShow: 1,
         },
       },
@@ -27,12 +42,11 @@ $(document).ready(function () {
     slidesToShow: 1,
     focusOnSelect: true,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     responsive: [
       {
         breakpoint: 1400,
         settings: {
-          arrows: true,
           centerMode: true,
           centerPadding: "150px",
           slidesToShow: 1,
@@ -48,7 +62,7 @@ $(document).ready(function () {
     centerPadding: "200px",
     slidesToShow: 1,
     focusOnSelect: true,
-    dots: true,
+    dots: false,
     autoplay: true,
     responsive: [
       {
@@ -87,28 +101,6 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $(".slick-slider-categories2_mobile").slick({
-    centerMode: true,
-    centerPadding: "200px",
-    slidesToShow: 1,
-    focusOnSelect: true,
-    dots: true,
-    autoplay: false,
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: "150px",
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-});
-
-$(document).ready(function () {
   $(".slick-carousel-center").slick({
     centerMode: true,
     centerPadding: "160px",
@@ -116,7 +108,7 @@ $(document).ready(function () {
     focusOnSelect: true,
     dots: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     nav: true,
     responsive: [
       {
@@ -125,6 +117,90 @@ $(document).ready(function () {
           arrows: true,
           centerMode: true,
           centerPadding: "71px",
+          slidesToShow: 3,
+        },
+      },
+
+      {
+        breakpoint: 1200,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "30px",
+          slidesToShow: 2,
+        },
+      },
+
+      {
+        breakpoint: 992,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "185px",
+          slidesToShow: 1,
+        },
+      },
+
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "95px",
+          slidesToShow: 1,
+        },
+      },
+
+      {
+        breakpoint: 575,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "38px",
+          slidesToShow: 1,
+        },
+      },
+
+      {
+        breakpoint: 425,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "13px",
+          slidesToShow: 1,
+        },
+      },
+
+      {
+        breakpoint: 375,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "25px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  $(".slick-carousel-center_inspiration").slick({
+    centerMode: true,
+    centerPadding: "160px",
+    slidesToShow: 3,
+    focusOnSelect: true,
+    dots: false,
+    infinite: true,
+    autoplay: false,
+    nav: true,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "70px",
           slidesToShow: 3,
         },
       },
@@ -164,71 +240,27 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "0",
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-});
-
-$(document).ready(function () {
-  $(".slick-carousel-center_inspiration").slick({
-    centerMode: true,
-    centerPadding: "160px",
-    slidesToShow: 3,
-    focusOnSelect: true,
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    nav: true,
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: "72.5px",
-          slidesToShow: 3,
-        },
-      },
-
-      {
-        breakpoint: 1200,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 2,
-        },
-      },
-
-      {
-        breakpoint: 992,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: "190px",
+          centerPadding: "38px",
           slidesToShow: 1,
         },
       },
 
       {
-        breakpoint: 768,
+        breakpoint: 425,
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "95px",
+          centerPadding: "12px",
           slidesToShow: 1,
         },
       },
 
       {
-        breakpoint: 575,
+        breakpoint: 375,
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "0",
+          centerPadding: "0px",
           slidesToShow: 1,
         },
       },
@@ -316,7 +348,7 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "72.5px",
+          centerPadding: "71px",
           slidesToShow: 3,
         },
       },
@@ -336,7 +368,7 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "190px",
+          centerPadding: "185px",
           slidesToShow: 1,
         },
       },
@@ -356,7 +388,17 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "0",
+          centerPadding: "38px",
+          slidesToShow: 1,
+        },
+      },
+
+      {
+        breakpoint: 425,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "13px",
           slidesToShow: 1,
         },
       },
@@ -380,7 +422,7 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "72.5px",
+          centerPadding: "70px",
           slidesToShow: 3,
         },
       },
@@ -400,7 +442,7 @@ $(document).ready(function () {
         settings: {
           arrows: true,
           centerMode: true,
-          centerPadding: "190px",
+          centerPadding: "185px",
           slidesToShow: 1,
         },
       },
@@ -738,7 +780,7 @@ function login() {
   const password = document.getElementById("password").value;
 
   // Construct the URL with query parameters
-  const url = `https://edevz.com/recipe/login.php?email=${encodeURIComponent(
+  const url = `https://recipe.edevz.com/client/api/login.php?email=${encodeURIComponent(
     email
   )}&password=${encodeURIComponent(password)}`;
 
@@ -753,14 +795,19 @@ function login() {
       console.log("Response:", data); // Log the response from the server
       if (data.success) {
         console.log("success");
+        console.log("success");
         // Save user information in session storage
-        sessionStorage.setItem("userId", data.data.user_id);
-        //sessionStorage.setItem("userName", data.data.name);
+        sessionStorage.setItem("userId", data.user.user_id);
+        sessionStorage.setItem("userName", data.user.name);
         sessionStorage.setItem("isLoggedIn", true);
 
-        $("#loginButton").addClass("d-none");
-        $("#profile-dropdown").removeClass("d-none");
-        window.location.href = "index.php"; // Redirect to the homepage (index.php)
+        // $("#loginButton").addClass("d-none");
+        // $("#profile-dropdown").removeClass("d-none");
+        // Update the UI to show the profile dropdown and hide the login button
+        // document.getElementById("loginButton").style.display = "none";
+        // document.getElementById("profile-dropdown").style.display = "block";
+        // Redirect to the homepage (index.php)
+        window.location.href = "index.php";
       } else {
         document.getElementById("responseMessage").textContent =
           "Login Failed!";
@@ -772,3 +819,24 @@ function login() {
         "An error occurred. Please try again later.";
     });
 }
+
+// function checkLoginSession() {
+//   fetch("https://recipe.edevz.com/client/api/checkLoginSession.php")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (data.logged_in) {
+//         // User is logged in, update the navbar accordingly
+//         document.getElementById("loginButton").style.display = "none";
+//         document.getElementById("profile-dropdown").style.display = "block";
+//         document.getElementById("profileName").textContent = data.user_name;
+//       } else {
+//         // User is not logged in, show the login button
+//         document.getElementById("loginButton").style.display = "block";
+//         document.getElementById("profile-dropdown").style.display = "none";
+//       }
+//     })
+//     .catch((error) => console.error("Error checking login session:", error));
+// }
+
+// // Call this function on page load
+// document.addEventListener("DOMContentLoaded", checkLoginSession);

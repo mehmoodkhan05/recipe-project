@@ -2,36 +2,6 @@
 include "navbar.php";
 ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipians</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <!-- BOOTSTRAP CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <!-- BOOTSTRAP CSS -->
-
-    <!-- Include jQuery from a CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- FONT AWESOME -->
-
-    <!-- SLICK SLIDER -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <!-- SLICK SLIDER -->
-
-</head>
-
 <body>
     <!-- HERO SECTION -->
     <section class="hero-section">
@@ -233,7 +203,7 @@ include "navbar.php";
     <!-- COMMUNITY CHOICE SECTION -->
     <section class="community-choice">
         <div class="container">
-            <div class="community-choice_header d-flex align-items-center">
+            <div class="community-choice_header d-flex align-items-center mb-3 mb-md-0">
                 <p class="fs-42">Community's
                     <span class="primary">Choice</span>
                 </p>
@@ -357,8 +327,8 @@ include "navbar.php";
     <!-- TRENDING NOW SECTION -->
     <section class="trending-choice">
         <div class="container">
-            <div class="trending-choice_header d-flex align-items-center">
-                <p class="fs-42">Trending <span class="primary">Choice</span></p>
+            <div class="trending-choice_header d-flex align-items-center mb-3 mb-md-0">
+                <p class="fs-42 mb-0">Trending <span class="primary">Choice</span></p>
                 <a href="#" class="btn btn-danger ms-auto">New trending</a>
             </div>
             <div class="trending-choice-carousel">
@@ -597,7 +567,7 @@ include "navbar.php";
             <div class="row colomns-main_row">
                 <div class="col-lg-6">
                     <div class="left-side_header d-flex align-items-center">
-                        <p class="fs-42">Quick & <span class="primary">Easy</span></p>
+                        <p class="fs-42 mb-0">Quick & <span class="primary">Easy</span></p>
                         <a href="#" class="btn btn-danger ms-auto">View all</a>
                     </div>
 
@@ -673,7 +643,7 @@ include "navbar.php";
 
                 <div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="right-side_header d-flex align-items-center">
-                        <p class="fs-42">Sweet <span class="primary">Desserts</span></p>
+                        <p class="fs-42 mb-0">Sweet <span class="primary">Desserts</span></p>
                         <a href="#" class="btn btn-danger ms-auto">View all</a>
                     </div>
 
@@ -1001,27 +971,3 @@ include "navbar.php";
 
     <?php include "footer.php"; ?>
 </body>
-
-<!-- BOOTSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script> -->
-<!-- BOOTSTRAP JS -->
-
-<!-- JQUERY -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- JQUERY -->
-
-<!-- SLICK SLIDER -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<!-- SLICK SLIDER -->
-
-<!-- JAVASCRIPT -->
-<script src="../js/index.js"></script>
-<!-- JAVASCRIPT -->

@@ -2,10 +2,10 @@
 session_start();
 
 // Function to check if the user is logged in
-function isUserLoggedIn()
-{
-    return isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'];
-}
+// function isUserLoggedIn()
+// {
+//     return isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'];
+// }
 ?>
 
 <script>
@@ -90,13 +90,13 @@ function isUserLoggedIn()
                         <li class="nav-item">
                             <a class="nav-link active me-4" href="#">Blog</a>
                         </li>
-                        <?php if (isUserLoggedIn()): ?>
+                        <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
                             <li class="dropdown" id="profile-dropdown">
                                 <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <img src="../assets/images/profile.jpg" alt="" class="img-fluid rounded-pill"
                                         id="profile-img">
-                                    <span id="username"><?php echo $_SESSION['user_name']; ?></span>
+                                    <span id="username"><?php echo $_SESSION['name']; ?></span>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Settings</a></li>
@@ -140,4 +140,5 @@ function isUserLoggedIn()
 
 <!-- JAVASCRIPT -->
 <script src="../js/index.js"></script>
+<!-- <script src="../js/main.js"></script> -->
 <!-- JAVASCRIPT -->
