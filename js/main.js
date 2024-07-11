@@ -38,21 +38,39 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".slick-slider-community_mobile").slick({
     centerMode: true,
-    centerPadding: "200px",
+    // centerPadding: "200px",
     slidesToShow: 1,
     focusOnSelect: true,
     dots: true,
     autoplay: false,
     responsive: [
       {
-        breakpoint: 1400,
+        breakpoint: 1024,
         settings: {
-          centerMode: true,
-          centerPadding: "150px",
           slidesToShow: 1,
-        },
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
       },
-    ],
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   });
 });
 
@@ -134,7 +152,7 @@ $(document).ready(function () {
       {
         breakpoint: 992,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
           centerPadding: "185px",
           slidesToShow: 1,
@@ -144,7 +162,7 @@ $(document).ready(function () {
       {
         breakpoint: 768,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
           centerPadding: "95px",
           slidesToShow: 1,
@@ -154,7 +172,7 @@ $(document).ready(function () {
       {
         breakpoint: 575,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
           centerPadding: "38px",
           slidesToShow: 1,
@@ -164,7 +182,7 @@ $(document).ready(function () {
       {
         breakpoint: 425,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
           centerPadding: "13px",
           slidesToShow: 1,
@@ -174,7 +192,7 @@ $(document).ready(function () {
       {
         breakpoint: 375,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
           centerPadding: "25px",
           slidesToShow: 1,

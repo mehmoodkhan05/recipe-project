@@ -337,8 +337,8 @@ include "navbar.php";
                     <div class="card">
                         <img src="../assets/images/speghati.jpg" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h6 class="card-title">Spaghetti Carbonara
-                                <span class="ms-5">
+                            <h6 class="card-title d-flex justify-content-between">Spaghetti Carbonara
+                                <span class="">
                                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                                     4.3
                                 </span>
@@ -353,8 +353,8 @@ include "navbar.php";
                     <div class="card">
                         <img src="../assets/images/speghati.jpg" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h6 class="card-title">Spaghetti Carbonara
-                                <span class="ms-5">
+                            <h6 class="card-title d-flex justify-content-between">Spaghetti Carbonara
+                                <span class="">
                                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                                     4.3
                                 </span>
@@ -369,8 +369,8 @@ include "navbar.php";
                     <div class="card">
                         <img src="../assets/images/speghati.jpg" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h6 class="card-title">Spaghetti Carbonara
-                                <span class="ms-5">
+                            <h6 class="card-title d-flex justify-content-between">Spaghetti Carbonara
+                                <span class="">
                                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                                     4.3
                                 </span>
@@ -385,8 +385,8 @@ include "navbar.php";
                     <div class="card">
                         <img src="../assets/images/speghati.jpg" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h6 class="card-title">Spaghetti Carbonara
-                                <span class="ms-5">
+                            <h6 class="card-title d-flex justify-content-between">Spaghetti Carbonara
+                                <span class="">
                                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                                     4.3
                                 </span>
@@ -401,8 +401,8 @@ include "navbar.php";
                     <div class="card">
                         <img src="../assets/images/speghati.jpg" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h6 class="card-title">Spaghetti Carbonara
-                                <span class="ms-5">
+                            <h6 class="card-title d-flex justify-content-between">Spaghetti Carbonara
+                                <span class="">
                                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                                     4.3
                                 </span>
@@ -417,8 +417,8 @@ include "navbar.php";
                     <div class="card">
                         <img src="../assets/images/speghati.jpg" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h6 class="card-title">Spaghetti Carbonara
-                                <span class="ms-5">
+                            <h6 class="card-title d-flex justify-content-between">Spaghetti Carbonara
+                                <span class="">
                                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
                                     4.3
                                 </span>

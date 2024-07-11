@@ -539,7 +539,6 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
       </div>
   `;
-
       quickContent.insertAdjacentHTML("beforeend", cardHtml);
     });
   }

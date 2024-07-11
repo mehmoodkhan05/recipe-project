@@ -23,7 +23,7 @@ include "navbar.php";
                     <div class="col-6 slick_right-side">
                         <div class="card-body">
                             <p class="card-title text-heading primary fs-42">
-                                Explore a world of <br> Flavors by Categories.
+                                Explore a world of Flavors by Categories.
                             </p>
                             <p class="card-text text-body">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum ad, molestias
@@ -47,7 +47,7 @@ include "navbar.php";
                     <div class="col-6 slick_right-side">
                         <div class="card-body">
                             <p class="card-title text-heading primary fs-42">
-                                Cook with Our Vibrant <br> Recipe Community.
+                                Cook with Our Vibrant Recipe Community.
                             </p>
                             <p class="card-text text-body">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum ad, molestias
@@ -71,7 +71,7 @@ include "navbar.php";
                     <div class="col-6 slick_right-side">
                         <div class="card-body">
                             <p class="card-title text-heading primary fs-42">
-                                Cook with Our Vibrant <br> Recipe Community.
+                                Cook with Our Vibrant Recipe Community.
                             </p>
                             <p class="card-text text-body">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum ad, molestias
@@ -327,5 +327,6 @@ include "navbar.php";
         });
     });
 </script>
+<!-- JAVASCRIPT -->
 
 </html>
